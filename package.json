@@ -1,8 +1,8 @@
 {
   "name": "3d-carousel-component",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "description": "A classy 3d carousel for react.js",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --mode development",
