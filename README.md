@@ -1,20 +1,14 @@
-Image
-
 # 3d-carousel-component
 
-- This is a classy 3d carousel for react.js;✨💞
+- A classy 3d carousel for react.js;✨💞
 
 # Table of Contents
 
-- [Getting Started](#getting-started🚀)🚀
-- [Customization](#customization🔥)🔥
-  - [Props List](#props-list)
-    - ContainerStyle
-    - CardStyle
-    - CardList
-- [Examples](#examples👾)👾
-- [Issues??](#issues🐛)🐛
-- [Special Mention](#special-mention💕)💕
+- [Getting Started🚀](#getting-started)
+- [Customization🔥](#customization)
+- [Examples👾](#examples)
+- [Issues??🐛](#issues)
+- [Special Mention💕](#special-mention)
 
 ## Getting Started🚀
 
@@ -38,7 +32,7 @@ const YourComponent = () => {
 
 - Basically you have to pass three props, Namely:
   - ContainerStyle
-  - CardStyle - CardList
+  - CardStyle
   - CardList
 - Out of this first two are for styling and last one contains list of your cards.
 - Note all variables, props, properties follow UpperCamelCase Rule.\*
@@ -80,7 +74,7 @@ const YourComponent = () => {
 ## Examples👾
 
 ```javascript
-import Carousel3D from  "3d-carousel-component"
+import Carousel3D from  "3d-carousel-component";
 
 const YourComponent  =  ()  =>  {
 	//List of element you want inside carousel.
@@ -100,7 +94,7 @@ const YourComponent  =  ()  =>  {
 		Padding:  "1em",
 		Margin:  "auto",
 	};
-	const constCardStyle = {
+	const CardStyle = {
 		Width:  "100%",
 		BackgroundColor: "blanchedalmond",
 		Padding:  "0.5em 1em",
@@ -109,7 +103,8 @@ const YourComponent  =  ()  =>  {
 	return  <Carousel3D
 			ContainerStyle={ContainerStyle}
 			CardStyle={CardStyle}
-			CardList={CardList}/>;
+			CardList={CardList}
+		/>;
 };
 
 export defalut YourComponent;
@@ -117,6 +112,6 @@ export defalut YourComponent;
 
 ## Issues??🐛
 
-- Having any issues or found any bugs free fell to reach us on github.📧
+- Having any issues or found any bugs, feel free to reach me on github.📧
 
 ## Special Mention💕
