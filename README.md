@@ -74,7 +74,7 @@ const YourComponent = () => {
 ## Examples👾
 
 ```javascript
-import Carousel3D from  "3d-carousel-component"
+import Carousel3D from  "3d-carousel-component";
 
 const YourComponent  =  ()  =>  {
 	//List of element you want inside carousel.
@@ -112,6 +112,6 @@ export defalut YourComponent;
 
 ## Issues??🐛
 
-- Having any issues or found any bugs free fell to reach me on github.📧
+- Having any issues or found any bugs, feel free to reach me on github.📧
 
 ## Special Mention💕
