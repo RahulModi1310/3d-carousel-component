@@ -13,7 +13,11 @@
     "type": "git",
     "url": "git+https://github.com/RahulModi1310/3d-carousel-component.git"
   },
-  "author": "Rahul Modi",
+  "author": {
+    "name": "Rahul Modi",
+    "email": "rahulkd2508@gmail.com",
+    "url": "https://github.com/RahulModi1310"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/RahulModi1310/3d-carousel-component/issues"
