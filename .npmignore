@@ -1,5 +1,6 @@
 src
 demo
+build
 .babelrc
 .gitignore
 webpack.config.js

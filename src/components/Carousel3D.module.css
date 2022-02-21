@@ -9,12 +9,29 @@
   overflow: hidden;
 }
 
-.toggleBtn {
-  width: 1em;
+.toggleBtnPrev {
+  width: 0;
+  height: 0;
+  border-top: 1em solid transparent;
+  border-right: 2em solid black;
+  border-bottom: 1em solid transparent;
+}
+
+.toggleBtnNext {
+  width: 0;
+  height: 0;
+  border-top: 1em solid transparent;
+  border-left: 2em solid black;
+  border-bottom: 1em solid transparent;
+}
+
+.toggleBtnPrev,
+.toggleBtnNext {
   transition: transform 500ms ease;
 }
 
-.toggleBtn:hover {
+.toggleBtnPrev:hover,
+.toggleBtnNext:hover {
   cursor: pointer;
   transform: scale(1.4);
 }

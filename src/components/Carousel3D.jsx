@@ -3,10 +3,6 @@ import React, { useCallback, useState, useEffect, useMemo } from "react";
 // CSS imports
 import style from "./Carousel3D.module.css";
 
-// Assets Imports
-import PrevButton from "./Assets/PrevButton.png";
-import NextButton from "./Assets/NextButton.png";
-
 const Carousel3D = (props) => {
   //Extracting Valid paramters for custom styling;
   const ContainerStyle = {
@@ -85,12 +81,7 @@ const Carousel3D = (props) => {
 
   return (
     <div className={style.CarouselContainer} style={ContainerStyle}>
-      <img
-        className={style.toggleBtn}
-        onClick={prevSlide}
-        src={PrevButton}
-        alt=""
-      />
+      <div className={style.toggleBtnPrev} onClick={prevSlide} />
       <div className={style.CardContainer}>
         {slide.map((obj, indx) => {
           return (
@@ -108,12 +99,7 @@ const Carousel3D = (props) => {
           );
         })}
       </div>
-      <img
-        className={style.toggleBtn}
-        onClick={nextSlide}
-        src={NextButton}
-        alt=""
-      />
+      <div className={style.toggleBtnNext} onClick={nextSlide} />
     </div>
   );
 };

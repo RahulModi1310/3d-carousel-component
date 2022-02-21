@@ -11,10 +11,6 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _Carousel3DModule = _interopRequireDefault(require("./Carousel3D.module.css"));
 
-var _PrevButton = _interopRequireDefault(require("./Assets/PrevButton.png"));
-
-var _NextButton = _interopRequireDefault(require("./Assets/NextButton.png"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
@@ -129,11 +125,9 @@ var Carousel3D = function Carousel3D(props) {
   return /*#__PURE__*/_react["default"].createElement("div", {
     className: _Carousel3DModule["default"].CarouselContainer,
     style: ContainerStyle
-  }, /*#__PURE__*/_react["default"].createElement("img", {
-    className: _Carousel3DModule["default"].toggleBtn,
-    onClick: prevSlide,
-    src: _PrevButton["default"],
-    alt: ""
+  }, /*#__PURE__*/_react["default"].createElement("div", {
+    className: _Carousel3DModule["default"].toggleBtnPrev,
+    onClick: prevSlide
   }), /*#__PURE__*/_react["default"].createElement("div", {
     className: _Carousel3DModule["default"].CardContainer
   }, slide.map(function (obj, indx) {
@@ -142,11 +136,9 @@ var Carousel3D = function Carousel3D(props) {
       className: "".concat(_Carousel3DModule["default"].Card, " ").concat(indx < current && _Carousel3DModule["default"]["prevImg".concat(current - indx)] || indx > current && _Carousel3DModule["default"]["nextImg".concat(indx - current)] || indx === current && _Carousel3DModule["default"]["active"]),
       style: CardStyle
     }, props.CardList[toshow[indx + 1]].element);
-  })), /*#__PURE__*/_react["default"].createElement("img", {
-    className: _Carousel3DModule["default"].toggleBtn,
-    onClick: nextSlide,
-    src: _NextButton["default"],
-    alt: ""
+  })), /*#__PURE__*/_react["default"].createElement("div", {
+    className: _Carousel3DModule["default"].toggleBtnNext,
+    onClick: nextSlide
   }));
 };
 
