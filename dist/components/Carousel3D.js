@@ -42,6 +42,7 @@ function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Sy
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 var Carousel3D = function Carousel3D(props) {
+  //Extracting Valid paramters for custom styling;
   var ContainerStyle = {
     width: props.ContainerStyle.Width || "100%",
     height: props.ContainerStyle.Height || "100%",
@@ -53,6 +54,8 @@ var Carousel3D = function Carousel3D(props) {
   var CardStyle = {
     width: props.CardStyle.Width || "none",
     height: props.CardStyle.Height || "none",
+    backgroundColor: props.CardStyle.BackgroundColor || "",
+    background: props.CardStyle.Background || "null",
     aspectRatio: props.CardStyle.AspectRatio || "none",
     padding: props.CardStyle.Padding || "0"
   };
@@ -61,7 +64,7 @@ var Carousel3D = function Carousel3D(props) {
   }, []);
   var length = slide.length; //current represent the center card of the carousel.
 
-  var _useState = (0, _react.useState)(0),
+  var _useState = (0, _react.useState)(2),
       _useState2 = _slicedToArray(_useState, 2),
       current = _useState2[0],
       setCurrent = _useState2[1];
@@ -74,19 +77,29 @@ var Carousel3D = function Carousel3D(props) {
 
   (0, _react.useEffect)(function () {
     setToShow(function () {
-      var val = 0;
+      var cardlength = props.CardList.length;
       var temp = [1];
-      slide.map(function () {
-        temp.push(val);
-        val += 1;
-        if (val === props.CardList.length) val = 0;
-        return 0;
-      });
+
+      if (cardlength >= 3) {
+        temp.push(cardlength - 2);
+        temp.push(cardlength - 1);
+        temp.push(0);
+        temp.push(1);
+        temp.push(2);
+      } else {
+        temp.push(0);
+        temp.push(cardlength - 1);
+        temp.push(0);
+        temp.push(cardlength - 1);
+        temp.push(0);
+      }
+
       return temp;
     });
-  }, [props.CardList, slide]); //Next Slide Handler
+  }, [props.CardList]); //Next Slide Handler
 
   var nextSlide = (0, _react.useCallback)(function () {
+    //setCurrent to next slide
     setCurrent(function (prevState) {
       return prevState === length - 1 ? 0 : prevState + 1;
     }); //Change the toshow array to change content of carousel
@@ -101,6 +114,7 @@ var Carousel3D = function Carousel3D(props) {
   }, [length, props.CardList, toshow]); //Previous Slide Handler
 
   var prevSlide = function prevSlide() {
+    //setCurrent to prev slide
     setCurrent(current === 0 ? length - 1 : current - 1); //Change the toshow array to change content of carousel
 
     var temp = _toConsumableArray(toshow);
