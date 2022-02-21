@@ -73,7 +73,8 @@ const YourComponent = () => {
 
   ### CardList
 
-  - It bassically an array of objects with _"element"_ key containing content of your card. (Can be anyting you wish to have 😉)
+  - It bassically an array of objects with _"element"_ key containing content of your card.
+    Can be anyting you wish to have...How about a carousel with embeded youtube videos.😉 
 
 ## Examples👾
 
@@ -118,8 +119,8 @@ Example Code Link: [click here](https://codesandbox.io/s/3d-carousel-component-s
 
 ## Issues??🐛
 
-- Having any issues or found any bugs, feel free to reach me on github.📧
+- Having any issues or found any bugs, feel free to reach me on github - [click here](https://github.com/RahulModi1310/3d-carousel-component/issues).📧
 
 ## Special Mention💕
 
-- Special Thanks to [Akshit Gupta](https://github.com/AkshitGuptaIITR) for the constant motivation and support.
+- Special Thanks to [Akshit Gupta](https://github.com/AkshitGuptaIITR) for constant motivation and support.
