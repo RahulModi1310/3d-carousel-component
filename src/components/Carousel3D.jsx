@@ -1,11 +1,14 @@
 import React, { useCallback, useState, useEffect, useMemo } from "react";
 
+// CSS imports
 import style from "./Carousel3D.module.css";
 
+// Assets Imports
 import PrevButton from "./Assets/PrevButton.png";
 import NextButton from "./Assets/NextButton.png";
 
 const Carousel3D = (props) => {
+  //Extracting Valid paramters for custom styling;
   const ContainerStyle = {
     width: props.ContainerStyle.Width || "100%",
     height: props.ContainerStyle.Height || "100%",
@@ -18,6 +21,8 @@ const Carousel3D = (props) => {
   const CardStyle = {
     width: props.CardStyle.Width || "none",
     height: props.CardStyle.Height || "none",
+    backgroundColor: props.CardStyle.BackgroundColor || "",
+    background: props.CardStyle.Background || "null",
     aspectRatio: props.CardStyle.AspectRatio || "none",
     padding: props.CardStyle.Padding || "0",
   };
@@ -25,26 +30,34 @@ const Carousel3D = (props) => {
   const slide = useMemo(() => [1, 2, 3, 4, 5], []);
   const length = slide.length;
   //current represent the center card of the carousel.
-  const [current, setCurrent] = useState(0);
+  const [current, setCurrent] = useState(2);
   const [toshow, setToShow] = useState([1, 0, 0, 0, 0, 0]);
 
   //initializing state according to the length of props
   useEffect(() => {
     setToShow(() => {
-      let val = 0;
+      let cardlength = props.CardList.length;
       let temp = [1];
-      slide.map(() => {
-        temp.push(val);
-        val += 1;
-        if (val === props.CardList.length) val = 0;
-        return 0;
-      });
+      if (cardlength >= 3) {
+        temp.push(cardlength - 2);
+        temp.push(cardlength - 1);
+        temp.push(0);
+        temp.push(1);
+        temp.push(2);
+      } else {
+        temp.push(0);
+        temp.push(cardlength - 1);
+        temp.push(0);
+        temp.push(cardlength - 1);
+        temp.push(0);
+      }
       return temp;
     });
-  }, [props.CardList, slide]);
+  }, [props.CardList]);
 
   //Next Slide Handler
   const nextSlide = useCallback(() => {
+    //setCurrent to next slide
     setCurrent((prevState) => (prevState === length - 1 ? 0 : prevState + 1));
 
     //Change the toshow array to change content of carousel
@@ -58,6 +71,7 @@ const Carousel3D = (props) => {
 
   //Previous Slide Handler
   const prevSlide = () => {
+    //setCurrent to prev slide
     setCurrent(current === 0 ? length - 1 : current - 1);
 
     //Change the toshow array to change content of carousel
