@@ -9,6 +9,7 @@
     "transpile": "babel src -d dist --copy-files",
     "prepublishOnly": "npm run transpile",
     "build": "webpack --mode production",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "publish-demo": "npm run build && npm run deploy"
   },
@@ -25,7 +26,7 @@
   "bugs": {
     "url": "https://github.com/RahulModi1310/3d-carousel-component/issues"
   },
-  "homepage": "https://github.com/RahulModi1310/3d-carousel-component#readme",
+  "homepage": "https://github.com/RahulModi1310.github.io/3d-carousel-component",
   "devDependencies": {
     "@babel/cli": "^7.17.0",
     "@babel/core": "^7.17.2",
