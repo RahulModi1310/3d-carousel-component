@@ -1,7 +1,10 @@
 # 3d-carousel-component
 
 - A classy 3d carousel for react.js;✨💞
+
   ![Example](./demo/Assets/demoExample.gif)
+  
+  Have a Look at the [Example](https://rahulmodi1310.github.io/3d-carousel-component/)
 
 # Table of Contents
 
@@ -110,6 +113,8 @@ const YourComponent  =  ()  =>  {
 
 export defalut YourComponent;
 ```
+
+Example Code Link: [click here](https://codesandbox.io/s/3d-carousel-component-srwf5v)
 
 ## Issues??🐛
 
